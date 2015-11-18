@@ -58,6 +58,10 @@ end
 % -------------------------------------------------------------------------
 %                                                            Train and test
 % -------------------------------------------------------------------------
+if isempty(imdb.classes.name) 
+    % no class labels provided, only for feature extraction
+    return;
+end
 
 if exist(opts.resultPath)
   info = load(opts.resultPath) ;
