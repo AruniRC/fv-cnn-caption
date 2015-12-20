@@ -54,7 +54,7 @@ I compiled the code using the following flags:
 	
 
 ## Acknowledgements
-The base code is taken from the Bilinear CNN project by Tsung-Yu Lin and Subhransu Maji at UMass Amherst.
+The base code is taken from the Bilinear CNN project by Tsung-Yu Lin, Aruni RoyChowdhury and Subhransu Maji at UMass Amherst.
 
 
 
