@@ -1,6 +1,28 @@
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
 # Generating feature encodings using deep CNNs
 
-## Base code description
+## Overview
 
 We use this code to generate CNN features on Flickr8k images using Imagenet pre-trained CNNs from VGG.
 Since Flickr8k images do not have class labels, it is not possible to directly fine-tune a network on them. 
@@ -9,13 +31,37 @@ use Fisher Vector encoding to get features that are, hopefully, more adapted to 
 original Imagenet pre-trained network features. This is under the assumption that there is a sufficient shift 
 in domain between Imagenet and Flickr. 
 
-Since many descriptions of images are closely related to spatial location (e.g. "the dog jumped *over* the bar"), 
-including explicit positional information by appending (x,y) coordinates to features is done here.
+
+### CNN features as Local descriptors
 
 ![FV-CNN model](downloads/fv_cnn.png)
 
+The features from an intermediate convolutional layer can be regarded as a $H \times W \times K$ tensor, as 
+shown in the figure above. Here, $K = 512$, denoting the number of channels or features for this feature map.
+$H$ and $W$ in this example are both 27, as we use 448x448 images as input and extract features from the $relu-5$ 
+layer of a VGG-16 model.
+
+
+### Spatial information
+
+Since many descriptions of images are closely related to spatial location (e.g. "the dog jumped *over* the bar"), 
+including explicit positional information by appending (x,y) coordinates to features is done here.
+
+
+
+
+## Results
+ 
+
+
+
+
+
+
+## Code description
+
 This code simply extracts the features at various settings (details below). The training of LSTMs to perform 
-image captioning on the FV-CNN and regular CNN features is the next step (not in this repo at present).
+image captioning on the FV-CNN and regular CNN features is the next step (*not in this repo* at present).
 
 
 The repository contains code using VLFEAT and MATCONVNET to:
@@ -26,22 +72,6 @@ The repository contains code using VLFEAT and MATCONVNET to:
 	+ D-CNN : CNN filterbanks with Fisher Vector pooling
 	+ B-CNN : bilinear CNN
 + Run experiments on variety of datasets.
-
-
-
-## Results
-
-
-The basic model 
-
-
-
-
-
-
-## 
-
-
 
 
 
