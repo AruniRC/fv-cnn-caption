@@ -12,7 +12,7 @@ in domain between Imagenet and Flickr.
 Since many descriptions of images are closely related to spatial location (e.g. "the dog jumped *over* the bar"), 
 including explicit positional information by appending (x,y) coordinates to features is done here.
 
-![FV-CNN model][downloads/fv_cnn.png]
+![FV-CNN model](downloads/fv_cnn.png)
 
 This code simply extracts the features at various settings (details below). The training of LSTMs to perform 
 image captioning on the FV-CNN and regular CNN features is the next step (not in this repo at present).
