@@ -154,12 +154,7 @@ Some qualitative examples of our captions are shown below:
 
 ![UMass_logo](http://vis-www.cs.umass.edu/fddb/umasslogo.gif)
 
-This was a term project done by  
-[Abhyuday Jagannatha](https://people.cs.umass.edu/~abhyuday/), 
-[Aruni RoyChowdhury](http://people.cs.umass.edu/~arunirc/),  
-[Huaizu Jiang](https://people.cs.umass.edu/~hzjiang/) and Weilong Hu for the 
-[Deep Learning seminar](https://people.cs.umass.edu/~mahadeva/CMPSCI_697_Deep_Learning/Welcome.html) 
-at UMass Amherst in **Fall 2015**.
+This was a term project done by [Abhyuday Jagannatha](https://people.cs.umass.edu/~abhyuday/), [Aruni RoyChowdhury](http://people.cs.umass.edu/~arunirc/), [Huaizu Jiang](https://people.cs.umass.edu/~hzjiang/) and Weilong Hu for the [Deep Learning seminar](https://people.cs.umass.edu/~mahadeva/CMPSCI_697_Deep_Learning/Welcome.html) at UMass Amherst in **Fall 2015**.
 
 The report we submitted can be accessed [here (PDF)](downloads/DL_report_final_aahw.pdf).
 
